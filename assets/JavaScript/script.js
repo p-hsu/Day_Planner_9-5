@@ -74,10 +74,10 @@ function timeCompare() {
             };
     });
     // get data from local storage 
-    var oldInput = JSON.parse(localStorage.getItem("userInput"));
+    var storedInput = JSON.parse(localStorage.getItem("allInput"));
         // conditional statement for defining stored as displayed
-        if (oldInput !== "") {
-        userInput = oldInput;
+        if (storedInput !== "") {
+        inputArray = storedInput;
         };
     };
 // call function
@@ -85,25 +85,28 @@ timeCompare();
 
 
 // use jquery event listener/event delegation for save button to save to local storage
-//function for storing data on event listener button click
-$("btn").on("click", storeInput());
+$(".btn-div").on("click", "button", function storeInput(e) {
+    // prevent default 
+    e.preventDefault();
+    // checking event
+    console.log("Saved!");
+});
+
 function storeInput() {
     // declare variable for user input of textarea
-    var textEl = $("<textarea>");
-    textEl.text(inputValue);
-
-    // conditional statement if value of forms not empty
-    if(userValue !== "") {
-        // execute localStorage.setItem for each value
-        // iterate for loop for length of userInput as value of .form-control element
+    var textEl = $(".form-control").val()
+    textEl = inputValue;
+    // loop for each textarea
+    if(inputValue !== "") {
         for (var i = 0; i < inputArray.length; i++) {
-            var userValue = $(".form-control").val();
-            //push value into array
-            inputArray.push(userValue);
+            var inputValue = $(".form-control").val();
+            // push value into array
+            inputArray.push(inputValue);
 
-            //.setItem
-            localStorage.setItem("userInput", JSON.stringify(userInput));
-
-        }
-    } else return;
+            // .setItem
+            localStorage.setItem("allInput", JSON.stringify(inputArray));
+            // for each textarea
+            $()
+        };
+    }else return;
 }
