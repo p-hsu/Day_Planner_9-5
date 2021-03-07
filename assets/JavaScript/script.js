@@ -1,4 +1,5 @@
-//REMEMBER TO USE JQUERY
+//TO DO before user input
+
 // display date using moment into #currentDay element
 var currentDate = moment().format("dddd, MMMM Do YYYY, HH:mm:ss");
 $("#currentDay").text(currentDate);
@@ -6,14 +7,16 @@ $("#currentDay").text(currentDate);
 // declare variable currentHr as comparison standard
 var currentHr = moment().format("HH");
 // checking argument
-console.log(currentHr);
+// console.log(currentHr);
 // declare variable startHr at 9am from startOf day
 var startHr = moment().startOf("day").add(9, "hour");
 // checking argument
 // console.log(startHr)
 
-// set and display each hour block 0900 - 1700
+//set empty array to store values upon user input
+var inputArray = [];
 
+// set and display each hour block 0900 - 1700
 // startHr.add(0, "hour") should return 0900
 var hr09 = startHr.add(0, "hour");
 hr09 = hr09.format("HH:mm");
@@ -57,7 +60,6 @@ hr17 = hr17.format("HH:mm")
 $(".hour17").text(hr17);
 
 // compare each hour block to comparison standard for past/present/future using if/else if/else
-
 function timeCompare() {
     // jquery iterate for each textarea element
     $(".form-control").each(function() {
@@ -67,13 +69,41 @@ function timeCompare() {
                 $(this).addClass("past");
             } else if (userHr == currentHr) {
                 $(this).addClass("present");
-            } else
+            } else {
                 $(this).addClass("future");
-
-    })
-}
+            };
+    });
+    // get data from local storage 
+    var oldInput = JSON.parse(localStorage.getItem("userInput"));
+        // conditional statement for defining stored as displayed
+        if (oldInput !== "") {
+        userInput = oldInput;
+        };
+    };
 // call function
 timeCompare();
 
 
 // use jquery event listener/event delegation for save button to save to local storage
+//function for storing data on event listener button click
+$("btn").on("click", storeInput());
+function storeInput() {
+    // declare variable for user input of textarea
+    var textEl = $("<textarea>");
+    textEl.text(inputValue);
+
+    // conditional statement if value of forms not empty
+    if(userValue !== "") {
+        // execute localStorage.setItem for each value
+        // iterate for loop for length of userInput as value of .form-control element
+        for (var i = 0; i < inputArray.length; i++) {
+            var userValue = $(".form-control").val();
+            //push value into array
+            inputArray.push(userValue);
+
+            //.setItem
+            localStorage.setItem("userInput", JSON.stringify(userInput));
+
+        }
+    } else return;
+}
