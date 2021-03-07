@@ -62,7 +62,7 @@ function timeCompare() {
     // jquery iterate for each textarea element
     $(".form-control").each(function() {
         var userHour = $(this).attr("id").split("_");
-        var userHr = parsInt(userHour[1]);
+        var userHr = parseInt(userHour[1]);
             if (userHr < currentHr) {
                 $(this).addClass("past");
             } else if (userHr == currentHr) {
@@ -72,6 +72,8 @@ function timeCompare() {
 
     })
 }
+// call function
+timeCompare();
 
 
 // use jquery event listener/event delegation for save button to save to local storage
