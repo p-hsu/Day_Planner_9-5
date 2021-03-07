@@ -3,24 +3,28 @@
 var currentDate = moment().format("dddd, MMMM Do YYYY, HH:mm:ss");
 $("#currentDay").text(currentDate);
 
-// declare variable referenceHr as comparison standard
-var referenceHr = moment()
+// declare variable currentHr as comparison standard
+var currentHr = moment().format("HH");
+// checking argument
+console.log(currentHr);
 // declare variable startHr at 9am from startOf day
 var startHr = moment().startOf("day").add(9, "hour");
-// checking statment
+// checking argument
 // console.log(startHr)
 
 // set and display each hour block 0900 - 1700
+
 // startHr.add(0, "hour") should return 0900
 var hr09 = startHr.add(0, "hour");
 hr09 = hr09.format("HH:mm");
+// checking argument
+// console.log(hr09)
 $(".hour09").text(hr09);
-
 // 1000
 var hr10 = startHr.add(1, "hour");
 // formate to hour only
 hr10 = hr10.format("HH:mm");
-// checking statement
+// checking argument
 // console.log(hr10)
 $(".hour10").text(hr10);
 // 1100
@@ -52,7 +56,22 @@ var hr17 = startHr.add(1, "hour");
 hr17 = hr17.format("HH:mm")
 $(".hour17").text(hr17);
 
-// compare each hour block to comparison standard for past/present/future
+// compare each hour block to comparison standard for past/present/future using if/else if/else
+
+function timeCompare() {
+    // jquery iterate for each textarea element
+    $(".form-control").each(function() {
+        var userHour = $(this).attr("id").split("_");
+        var userHr = parsInt(userHour[1]);
+            if (userHr < currentHr) {
+                $(this).addClass("past");
+            } else if (userHr == currentHr) {
+                $(this).addClass("present");
+            } else
+                $(this).addClass("future");
+
+    })
+}
 
 
-// use jquery event listener for save button to save to local storage
+// use jquery event listener/event delegation for save button to save to local storage
