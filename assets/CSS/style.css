@@ -20,6 +20,18 @@ body {
     border-radius: 0;
     border-bottom: 10px solid black;
   }
+    
+  .clrBtn {
+    border-left: 1px solid black;
+    border-radius: 10px;
+    background-color: #df8909;
+    color: black;
+  }
+  
+  .clrBtn:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
   
   .description{
     white-space: pre-wrap;
@@ -65,7 +77,7 @@ body {
     color: white;
   }
   
-  .saveBtn i:hover {
+  .saveBtn:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }

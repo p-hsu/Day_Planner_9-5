@@ -1,4 +1,3 @@
-//TO DO before user input
 
 // display date using moment into #currentDay element
 var currentDate = moment().format("dddd, MMMM Do YYYY, HH:mm:ss");
@@ -13,8 +12,6 @@ var startHr = moment().startOf("day").add(9, "hour");
 // checking argument
 // console.log(startHr)
 
-//set empty array to store values upon user input
-var inputArray = [];
 
 // set and display each hour block 0900 - 1700
 // startHr.add(0, "hour") should return 0900
@@ -25,7 +22,7 @@ hr09 = hr09.format("HH:mm");
 $(".hour09").text(hr09);
 // 1000
 var hr10 = startHr.add(1, "hour");
-// formate to hour only
+// format to hour only
 hr10 = hr10.format("HH:mm");
 // checking argument
 // console.log(hr10)
@@ -73,40 +70,209 @@ function timeCompare() {
                 $(this).addClass("future");
             };
     });
-    // get data from local storage 
-    var storedInput = JSON.parse(localStorage.getItem("allInput"));
-        // conditional statement for defining stored as displayed
-        if (storedInput !== "") {
-        inputArray = storedInput;
-        };
-    };
+};
 // call function
 timeCompare();
 
+// event listener for each btn to store and get data for each individual timeblock
+//0900
+// getItem
+var load09 = localStorage.getItem("block09");
+if (load09 !== "" || load09 !== null) {
+        $("#form_09").val(load09);
+};
 
-// use jquery event listener/event delegation for save button to save to local storage
-$(".btn-div").on("click", "button", function storeInput(e) {
-    // prevent default 
-    e.preventDefault();
-    // checking event
-    console.log("Saved!");
+$(".btn09").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry09 = $("#form_09").val();
+    if (entry09 === "" || entry09 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block09", entry09);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
+});
+//1000
+// getItem
+var load10 = localStorage.getItem("block10");
+if (load10 !== "" || load10 !== null) {
+        $("#form_10").val(load10);
+};
+
+$(".btn10").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry10 = $("#form_10").val();
+    if (entry10 === "" || entry10 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block10", entry10);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
+});
+//1100
+// getItem
+var load11 = localStorage.getItem("block11");
+if (load11 !== "" || load11 !== null) {
+        $("#form_11").val(load11);
+};
+$(".btn11").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry11 = $("#form_11").val();
+    if (entry11 === "" || entry11 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block11", entry11);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
+});
+//1200
+// getItem
+var load12 = localStorage.getItem("block12");
+if (load12 !== "" || load12 !== null) {
+        $("#form_12").val(load12);
+};
+$(".btn12").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry12 = $("#form_12").val();
+    if (entry12 === "" || entry12 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block12", entry12);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
+});
+//1300
+// getItem
+var load13 = localStorage.getItem("block13");
+if (load13 !== "" || load13 !== null) {
+        $("#form_13").val(load13);
+};
+
+$(".btn13").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry13 = $("#form_13").val();
+    if (entry13 === "" || entry13 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block13", entry13);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
+});
+//1400
+// getItem
+var load14 = localStorage.getItem("block14");
+if (load14 !== "" || load14 !== null) {
+        $("#form_14").val(load14);
+};
+
+$(".btn14").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry14 = $("#form_14").val();
+    if (entry14 === "" || entry14 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block14", entry14);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
+});
+//1500
+// getItem
+var load15 = localStorage.getItem("block15");
+if (load15 !== "" || load15 !== null) {
+        $("#form_15").val(load15);
+};
+
+$(".btn15").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry15 = $("#form_15").val();
+    if (entry15 === "" || entry15 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block15", entry15);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
+});
+//1600
+// getItem
+var load16 = localStorage.getItem("block16");
+if (load16 !== "" || load16 !== null) {
+        $("#form_16").val(load16);
+};
+
+$(".btn16").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry16 = $("#form_16").val();
+    if (entry16 === "" || entry16 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block16", entry16);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
+});
+//1700
+// getItem
+var load17 = localStorage.getItem("block17");
+if (load17 !== "" || load17 !== null) {
+        $("#form_17").val(load17);
+};
+
+$(".btn17").on("click", function(e) {
+    e.preventDefault;
+    console.log("Button clicked!");
+    // setItem
+    var entry17 = $("#form_17").val();
+    if (entry17 === "" || entry17 === null){
+        alert("Nothing to save!");
+        console.log("Nothing to save!");
+    } else{
+        localStorage.setItem("block17", entry17);
+        alert("Entry saved!");
+        console.log("Entry saved!");
+    }
 });
 
-function storeInput() {
-    // declare variable for user input of textarea
-    var textEl = $(".form-control").val()
-    textEl = inputValue;
-    // loop for each textarea
-    if(inputValue !== "") {
-        for (var i = 0; i < inputArray.length; i++) {
-            var inputValue = $(".form-control").val();
-            // push value into array
-            inputArray.push(inputValue);
-
-            // .setItem
-            localStorage.setItem("allInput", JSON.stringify(inputArray));
-            // for each textarea
-            $()
-        };
-    }else return;
-}
+// clear localStorage with clear button
+$(".clrBtn").on("click", function(e) {
+    e.preventDefault;
+    clearAll()
+    function clearAll() {
+        $("textarea").each(function(){
+            $(this).val("");
+        });
+    };
+    localStorage.clear();
+    alert("All saved entries cleared!");
+    console.log("Clear stored data!");
+})
