@@ -84,16 +84,16 @@ if (load09 !== "" || load09 !== null) {
 
 $(".btn09").on("click", function(e) {
     e.preventDefault;
-    console.log("Button clicked!");
+    // console.log("Button clicked!");
     // setItem
     var entry09 = $("#form_09").val();
     if (entry09 === "" || entry09 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block09", entry09);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 //1000
@@ -105,16 +105,16 @@ if (load10 !== "" || load10 !== null) {
 
 $(".btn10").on("click", function(e) {
     e.preventDefault;
-    console.log("Button clicked!");
+    // console.log("Button clicked!");
     // setItem
     var entry10 = $("#form_10").val();
     if (entry10 === "" || entry10 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block10", entry10);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 //1100
@@ -125,16 +125,16 @@ if (load11 !== "" || load11 !== null) {
 };
 $(".btn11").on("click", function(e) {
     e.preventDefault;
-    console.log("Button clicked!");
+    // console.log("Button clicked!");
     // setItem
     var entry11 = $("#form_11").val();
     if (entry11 === "" || entry11 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block11", entry11);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 //1200
@@ -145,16 +145,16 @@ if (load12 !== "" || load12 !== null) {
 };
 $(".btn12").on("click", function(e) {
     e.preventDefault;
-    console.log("Button clicked!");
+    // console.log("Button clicked!");
     // setItem
     var entry12 = $("#form_12").val();
     if (entry12 === "" || entry12 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block12", entry12);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 //1300
@@ -166,16 +166,16 @@ if (load13 !== "" || load13 !== null) {
 
 $(".btn13").on("click", function(e) {
     e.preventDefault;
-    console.log("Button clicked!");
+    // console.log("Button clicked!");
     // setItem
     var entry13 = $("#form_13").val();
     if (entry13 === "" || entry13 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block13", entry13);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 //1400
@@ -187,16 +187,16 @@ if (load14 !== "" || load14 !== null) {
 
 $(".btn14").on("click", function(e) {
     e.preventDefault;
-    console.log("Button clicked!");
+    // console.log("Button clicked!");
     // setItem
     var entry14 = $("#form_14").val();
     if (entry14 === "" || entry14 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block14", entry14);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 //1500
@@ -208,16 +208,16 @@ if (load15 !== "" || load15 !== null) {
 
 $(".btn15").on("click", function(e) {
     e.preventDefault;
-    console.log("Button clicked!");
+    // console.log("Button clicked!");
     // setItem
     var entry15 = $("#form_15").val();
     if (entry15 === "" || entry15 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block15", entry15);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 //1600
@@ -229,16 +229,16 @@ if (load16 !== "" || load16 !== null) {
 
 $(".btn16").on("click", function(e) {
     e.preventDefault;
-    console.log("Button clicked!");
+    // console.log("Button clicked!");
     // setItem
     var entry16 = $("#form_16").val();
     if (entry16 === "" || entry16 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block16", entry16);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 //1700
@@ -255,11 +255,11 @@ $(".btn17").on("click", function(e) {
     var entry17 = $("#form_17").val();
     if (entry17 === "" || entry17 === null){
         alert("Nothing to save!");
-        console.log("Nothing to save!");
+        // console.log("Nothing to save!");
     } else{
         localStorage.setItem("block17", entry17);
         alert("Entry saved!");
-        console.log("Entry saved!");
+        // console.log("Entry saved!");
     }
 });
 
@@ -274,5 +274,5 @@ $(".clrBtn").on("click", function(e) {
     };
     localStorage.clear();
     alert("All saved entries cleared!");
-    console.log("Clear stored data!");
+    // console.log("Clear stored data!");
 })
