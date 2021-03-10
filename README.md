@@ -46,7 +46,7 @@ individual blocks. Please refer to the comments retained in the `script.js` file
 
 ## Screenshot
 
-**Password Generator Application**
+**Day Planner Application**
 
 ![Animated GIF of application:](./assets/images/day-planner.gif)
 
@@ -55,7 +55,7 @@ individual blocks. Please refer to the comments retained in the `script.js` file
 
 Please use the following link to deploy live URL of this project:
 
-[Password Generator Application](https://p-hsu.github.io/Day_Planner_9-5/)
+[Day Planner 9 - 5](https://p-hsu.github.io/Day_Planner_9-5/)
 
 ## Credit
 
